@@ -194,6 +194,7 @@ body {
 
 .navbar-brand {
   max-width: 100px;
+  position: relative;
 }
 .navbar-brand img {
   max-width: 100%;
@@ -243,6 +244,10 @@ body {
   opacity: 0;
   height: 0px;
   margin-top: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,10 +258,16 @@ body {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   gap: 20px;
-  max-height: 300px;
-  width: 50vw;
+}
+.cart-menu .cart-list .remove {
+  -webkit-transform: translateX(-200%);
+      -ms-transform: translateX(-200%);
+          transform: translateX(-200%);
+  opacity: 0;
 }
 .cart-menu .cart-list .list-item {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,7 +278,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 5px;
-  background-color: rgba(39, 38, 67, 0.7254901961);
+  min-width: 444px;
+  background-color: #272643;
   border-radius: 1rem;
   color: white;
 }
@@ -321,12 +333,12 @@ body {
 }
 .products .product img {
   max-width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .products .product button {
   color: #fff;
@@ -364,10 +376,26 @@ body {
   text-align: center;
 }
 
+.fa-xmark {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  cursor: pointer;
+}
+
 .hiden {
   opacity: 1 !important;
   height: -webkit-max-content !important;
   height: -moz-max-content !important;
   height: max-content !important;
   margin-top: 25px !important;
+}
+
+.close {
+  opacity: 1 !important;
+  visibility: visible !important;
+  height: auto !important;
 }/*# sourceMappingURL=style.css.map */
